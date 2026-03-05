@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Voteseiten – Plotropolis</title>
+<title>Voteseiten – NeoMine</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
-<link rel="icon" href="plotropolis.png" type="image/png"/>
+<link rel="icon" href="neomine.png" type="image/png"/>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --gold: #f5c842;
-    --gold-light: #ffe87a;
-    --gold-dark: #b8922a;
+    --purple: #9d4edd;
+    --purple-light: #c77dff;
+    --purple-dark: #5a189a;
     --navy: #0d1b3e;
     --navy-mid: #122151;
     --navy-light: #1a2e6b;
-    --blue-glow: #2a5ce4;
-    --teal: #00d4ff;
+    --blue-glow: #00d4ff;
+    --cyan: #00d4ff;
     --text: #e8eaf6;
     --text-muted: #8fa3d4;
   }
@@ -36,9 +36,9 @@
     position: fixed;
     inset: 0;
     background:
-      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(42,92,228,0.35) 0%, transparent 70%),
-      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(245,200,66,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse 40% 40% at 80% 80%, rgba(0,212,255,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(157,78,221,0.35) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(0,212,255,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 80% 80%, rgba(157,78,221,0.08) 0%, transparent 60%),
       linear-gradient(180deg, #060e24 0%, #0d1b3e 40%, #091535 100%);
     z-index: 0;
   }
@@ -57,7 +57,7 @@
       radial-gradient(1px 1px at 10% 60%, rgba(255,255,255,0.3) 0%, transparent 100%),
       radial-gradient(1px 1px at 60% 70%, rgba(255,255,255,0.4) 0%, transparent 100%),
       radial-gradient(1px 1px at 85% 80%, rgba(255,255,255,0.3) 0%, transparent 100%),
-      radial-gradient(2px 2px at 25% 50%, rgba(245,200,66,0.5) 0%, transparent 100%),
+      radial-gradient(2px 2px at 25% 50%, rgba(157,78,221,0.5) 0%, transparent 100%),
       radial-gradient(2px 2px at 70% 25%, rgba(0,212,255,0.4) 0%, transparent 100%);
     z-index: 0;
     animation: twinkle 6s ease-in-out infinite alternate;
@@ -89,7 +89,6 @@
     right: 0;
     height: 180px;
     background:
-      /* Buildings silhouette */
       linear-gradient(to top, #040c1e 60px, transparent 60px) 0 0 / 40px 80px repeat-x,
       linear-gradient(to top, #040c1e 100px, transparent 100px) 20px 0 / 50px 120px repeat-x,
       linear-gradient(to top, #040c1e 60px, transparent 60px) 45px 0 / 30px 70px repeat-x,
@@ -117,7 +116,7 @@
     justify-content: space-between;
     background: rgba(6, 14, 36, 0.7);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(245, 200, 66, 0.15);
+    border-bottom: 1px solid rgba(157, 78, 221, 0.15);
   }
 
   .logo-area {
@@ -135,7 +134,7 @@
     font-family: 'Cinzel Decorative', serif;
     font-size: 1.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+    background: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 50%, var(--purple-dark) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -155,7 +154,7 @@
     transition: color 0.2s;
   }
 
-  nav a:hover { color: var(--gold); }
+  nav a:hover { color: var(--purple); }
 
   /* ── HERO ── */
   .hero {
@@ -168,7 +167,7 @@
     font-size: 0.78rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--teal);
+    color: var(--cyan);
     margin-bottom: 16px;
     opacity: 0.9;
   }
@@ -182,7 +181,7 @@
     width: 100%;
     max-width: 560px;
     height: auto;
-    filter: drop-shadow(0 0 40px rgba(245,180,50,0.45)) drop-shadow(0 0 80px rgba(42,92,228,0.3));
+    filter: drop-shadow(0 0 40px rgba(157,78,221,0.45)) drop-shadow(0 0 80px rgba(0,212,255,0.3));
     animation: logoFloat 4s ease-in-out infinite;
   }
 
@@ -197,7 +196,7 @@
     font-weight: 600;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--purple);
     margin-bottom: 18px;
     opacity: 0.9;
   }
@@ -216,15 +215,15 @@
     content: '';
     flex: 1;
     height: 1px;
-    background: linear-gradient(to right, transparent, rgba(245,200,66,0.5));
+    background: linear-gradient(to right, transparent, rgba(157,78,221,0.5));
   }
 
   .hero-divider::after {
-    background: linear-gradient(to left, transparent, rgba(245,200,66,0.5));
+    background: linear-gradient(to left, transparent, rgba(157,78,221,0.5));
   }
 
   .hero-divider span {
-    color: var(--gold);
+    color: var(--purple);
     font-size: 1.1rem;
   }
 
@@ -241,16 +240,16 @@
     display: inline-flex;
     align-items: flex-start;
     gap: 12px;
-    background: rgba(42, 92, 228, 0.12);
-    border: 1px solid rgba(42, 92, 228, 0.35);
-    border-left: 3px solid var(--teal);
+    background: rgba(157, 78, 221, 0.12);
+    border: 1px solid rgba(157, 78, 221, 0.35);
+    border-left: 3px solid var(--purple);
     border-radius: 8px;
     padding: 14px 20px;
     max-width: 660px;
     margin: 0 auto;
     text-align: left;
     font-size: 0.88rem;
-    color: #a8c0f0;
+    color: #c8a8f0;
     line-height: 1.6;
   }
 
@@ -259,7 +258,7 @@
     width: 20px;
     height: 20px;
     margin-top: 1px;
-    color: var(--teal);
+    color: var(--purple);
   }
 
   /* ── VOTE GRID ── */
@@ -275,7 +274,7 @@
     font-size: 0.75rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--purple);
     text-align: center;
     margin-bottom: 40px;
     display: flex;
@@ -288,10 +287,10 @@
     content: '';
     flex: 1;
     height: 1px;
-    background: linear-gradient(to right, transparent, rgba(245,200,66,0.3));
+    background: linear-gradient(to right, transparent, rgba(157,78,221,0.3));
   }
   .section-label::after {
-    background: linear-gradient(to left, transparent, rgba(245,200,66,0.3));
+    background: linear-gradient(to left, transparent, rgba(157,78,221,0.3));
   }
 
   .vote-grid {
@@ -304,7 +303,7 @@
   .vote-card {
     position: relative;
     background: linear-gradient(145deg, rgba(26,46,107,0.6) 0%, rgba(18,33,81,0.8) 100%);
-    border: 1px solid rgba(245,200,66,0.12);
+    border: 1px solid rgba(157,78,221,0.12);
     border-radius: 16px;
     padding: 32px 28px 28px;
     text-decoration: none;
@@ -323,7 +322,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 60% 50% at 50% -10%, rgba(245,200,66,0.08) 0%, transparent 70%);
+    background: radial-gradient(ellipse 60% 50% at 50% -10%, rgba(157,78,221,0.08) 0%, transparent 70%);
     pointer-events: none;
   }
 
@@ -332,7 +331,7 @@
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(245,200,66,0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(157,78,221,0.4), transparent);
     border-radius: 16px 16px 0 0;
     transition: opacity 0.25s;
     opacity: 0;
@@ -340,11 +339,11 @@
 
   .vote-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(245,200,66,0.4);
+    border-color: rgba(157,78,221,0.4);
     box-shadow:
       0 20px 50px rgba(0,0,0,0.5),
-      0 0 30px rgba(245,200,66,0.08),
-      inset 0 1px 0 rgba(245,200,66,0.1);
+      0 0 30px rgba(157,78,221,0.12),
+      inset 0 1px 0 rgba(157,78,221,0.1);
   }
 
   .vote-card:hover::after { opacity: 1; }
@@ -356,7 +355,7 @@
     font-family: 'Cinzel Decorative', serif;
     font-size: 2.5rem;
     font-weight: 900;
-    color: rgba(245,200,66,0.06);
+    color: rgba(157,78,221,0.06);
     line-height: 1;
     user-select: none;
   }
@@ -364,8 +363,8 @@
   .card-icon {
     width: 52px;
     height: 52px;
-    background: linear-gradient(135deg, rgba(42,92,228,0.3), rgba(0,212,255,0.15));
-    border: 1px solid rgba(0,212,255,0.2);
+    background: linear-gradient(135deg, rgba(157,78,221,0.3), rgba(0,212,255,0.15));
+    border: 1px solid rgba(157,78,221,0.2);
     border-radius: 14px;
     display: flex;
     align-items: center;
@@ -376,7 +375,7 @@
   .card-icon svg {
     width: 26px;
     height: 26px;
-    color: var(--teal);
+    color: var(--cyan);
   }
 
   .card-body { flex: 1; }
@@ -412,15 +411,15 @@
   }
 
   .badge-java {
-    background: rgba(0, 149, 237, 0.2);
-    border: 1px solid rgba(0,149,237,0.4);
+    background: rgba(0, 212, 255, 0.2);
+    border: 1px solid rgba(0,212,255,0.4);
     color: #5bc8ff;
   }
 
   .badge-bedrock {
-    background: rgba(48,128,43,0.2);
-    border: 1px solid rgba(48,128,43,0.4);
-    color: #7dda75;
+    background: rgba(157, 78, 221, 0.2);
+    border: 1px solid rgba(157,78,221,0.4);
+    color: #c77dff;
   }
 
   .card-cta {
@@ -428,22 +427,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(135deg, rgba(245,200,66,0.12), rgba(245,200,66,0.06));
-    border: 1px solid rgba(245,200,66,0.2);
+    background: linear-gradient(135deg, rgba(157,78,221,0.12), rgba(157,78,221,0.06));
+    border: 1px solid rgba(157,78,221,0.2);
     border-radius: 10px;
     padding: 12px 18px;
     font-family: 'Cinzel', serif;
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.08em;
-    color: var(--gold);
+    color: var(--purple);
     text-transform: uppercase;
     transition: background 0.2s, border-color 0.2s;
   }
 
   .vote-card:hover .card-cta {
-    background: linear-gradient(135deg, rgba(245,200,66,0.22), rgba(245,200,66,0.12));
-    border-color: rgba(245,200,66,0.45);
+    background: linear-gradient(135deg, rgba(157,78,221,0.22), rgba(157,78,221,0.12));
+    border-color: rgba(157,78,221,0.45);
   }
 
   .cta-arrow {
@@ -459,7 +458,7 @@
     position: relative;
     z-index: 2;
     background: rgba(4, 12, 30, 0.8);
-    border-top: 1px solid rgba(245,200,66,0.1);
+    border-top: 1px solid rgba(157,78,221,0.1);
     text-align: center;
     padding: 24px;
     font-size: 0.8rem;
@@ -469,7 +468,7 @@
   }
 
   footer a {
-    color: var(--gold);
+    color: var(--purple);
     text-decoration: none;
     margin: 0 12px;
     transition: opacity 0.2s;
@@ -508,13 +507,13 @@
   <!-- HEADER -->
   <header>
     <div class="logo-area">
-      <img src="plotropolis.png" alt="PR" style="width:40px;height:40px;object-fit:contain;image-rendering:pixelated;"/>
-      <span class="logo-text">Plotropolis</span>
+      <img src="neomine.png" alt="NM" style="width:40px;height:40px;object-fit:contain;image-rendering:pixelated;"/>
+      <span class="logo-text">NeoMine</span>
     </div>
     <nav>
-      <a href="#https://plotropolis.de">Coming Soon</a>
-      <a href="https://shop.plotropolis.de">Shop</a>
-      <a href="https://discord.gg/tD4dXuBpt2">Discord</a>
+      <a href="https://neomine.de">Coming Soon</a>
+      <a href="https://shop.neomine.de">Shop</a>
+      <a href="https://discord.gg/neomine">Discord</a>
     </nav>
   </header>
 
@@ -522,7 +521,7 @@
   <section class="hero">
     <p class="hero-eyebrow">✦ Unterstütze den Server ✦</p>
     <div class="hero-logo-wrap">
-      <img src="content.png" alt="Plotropolis" class="hero-logo-img"/>
+      <img src="neomine-logo.png" alt="NeoMine" class="hero-logo-img"/>
     </div>
     <h2 class="hero-subtitle">Voteseiten</h2>
     <div class="hero-divider"><span>◆</span></div>
@@ -547,7 +546,7 @@
     <div class="vote-grid">
 
       <!-- Card 1 -->
-      <a class="vote-card" href="https://minecraft-server.eu/vote/index/237C9" target="_blank" rel="noopener">
+      <a class="vote-card" href="https://minecraft-server.eu/vote/index/XXXXX" target="_blank" rel="noopener">
         <div class="card-num">01</div>
         <div class="card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -569,7 +568,7 @@
       </a>
 
       <!-- Card 2 -->
-      <a class="vote-card" href="https://www.minecraft-serverlist.net/vote/60079" target="_blank" rel="noopener">
+      <a class="vote-card" href="https://www.minecraft-serverlist.net/vote/XXXXX" target="_blank" rel="noopener">
         <div class="card-num">02</div>
         <div class="card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -591,7 +590,7 @@
       </a>
 
       <!-- Card 3 -->
-      <a class="vote-card" href="https://serverliste.net/vote/5473" target="_blank" rel="noopener">
+      <a class="vote-card" href="https://serverliste.net/vote/XXXXX" target="_blank" rel="noopener">
         <div class="card-num">03</div>
         <div class="card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -614,7 +613,7 @@
       </a>
 
       <!-- Card 4 -->
-      <a class="vote-card" href="https://www.mc-liste.de/server/133/vote#serverPage" target="_blank" rel="noopener">
+      <a class="vote-card" href="https://www.mc-liste.de/server/XXXXX/vote#serverPage" target="_blank" rel="noopener">
         <div class="card-num">04</div>
         <div class="card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -636,7 +635,7 @@
       </a>
 
       <!-- Card 5 -->
-      <a class="vote-card" href="https://topminecraftservers.org/vote/42843" target="_blank" rel="noopener">
+      <a class="vote-card" href="https://topminecraftservers.org/vote/XXXXX" target="_blank" rel="noopener">
         <div class="card-num">05</div>
         <div class="card-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -663,10 +662,10 @@
   <!-- FOOTER -->
   <footer>
     <div style="margin-bottom:10px;">
-      Copyright &copy; 2026 <strong style="color:var(--gold);">PLOTROPOLIS</strong> &nbsp;·&nbsp; Not affiliated with Mojang AB.
+      Copyright &copy; 2026 <strong style="color:var(--purple);">NEOMINE</strong> &nbsp;·&nbsp; Not affiliated with Mojang AB.
     </div>
-    <a href="https://shop.plotropolis.de/Impressum">Impressum</a>
-    <a href="https://discord.gg/tD4dXuBpt2">Discord</a>
+    <a href="https://shop.neomine.de/Impressum">Impressum</a>
+    <a href="https://discord.gg/neomine">Discord</a>
   </footer>
 
 </div>
